@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  background-image: url(./assets/pubg-images/header.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  background: radial-gradient(rgb(48, 61, 130), #060a1f);
+}
+
+.BGImage {
+  background-image: url(./assets/pubg-images/point-card-bg.49d9002775af325b9035.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.package-card {
+  border: 3px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+
+  text-align: center;
+}
+
+.package-card:hover {
+  background-color: #f0f0f0;
+}
+
+.color-primary {
+  color: #141B3D;
+}
+
+
+.bg-primary {
+  background-color: #141B3D;
+}
+
+.package-text {
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-highlight {
+  color: #FFD700;
+}
+
+.BGImage img {
+  height: 95%;
+  width: 100%;
+  transition: all 0.2s linear;
+
+}
+.BGImage img:nth-child(1) {
+  transform: scale(1) translate(-5%);
+}
+
+.BGImage img:nth-child(2) {
+  height: 100%;
+  width: 70%;
+}
+
+.BGImage:hover img:nth-child(1){
+  transform: scale(1.05) translate(-5%);
+}
+.BGImage:hover img:nth-child(2) {
+  transform: scale(1.05);
+}
+
+/* Custom styles for the modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #1B234D;
+  padding: 20px;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #060a1f;
+}
+
+.payment-logo {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.payment-logo:hover {
+  transform: scale(1.1);
+}
+
+.submit-button {
+  transition: all 0.2s linear;
+}
+
+.clr-gold {
+  filter: invert(62%) sepia(100%) saturate(298%) hue-rotate(2deg) brightness(160%) contrast(85%);
+}
+
+.clr-silver {
+  filter: invert(71%) sepia(13%) saturate(125%) hue-rotate(169deg) brightness(300%) contrast(86%);
+}
+
+
+.submit-button:disabled {
+  cursor: not-allowed;
+}
+
+.id-label {
+  color: #FFD700;
+}
+
+.id-value {
+  color: #FFD700;
+}
+
+/* Add these styles to your main CSS file or within a <style> tag in your index.html */
+.btn-success,
+.btn-fail {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-success::before,
+.btn-fail::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 80%);
+  opacity: 1;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7),
+    6px 6px 10px rgba(0, 0, 0, 0.5),
+    9px 9px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.loader-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connecting-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-square {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+.continue-button {
+  transition: background 0.3s ease;
+}
+
+.box-loader {
+  height: 70vh;
+  width: 100%;
+  position: fixed;
+  top: 0vh;
+  left: 0;
+  background-color: #0f1328;
+}
+
+.parent-loader {
+  perspective: 2000px;
+  height: auto;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.loader {
+  height: auto;
+  width: 100%;
+  animation: a1 3s linear infinite;
+
+}
+
+@keyframes a1 {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.loader1 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.glob1 {
+  transform: rotateY(-180deg);
+}
+
+.tickImage {
+  height: 100%;
+  width: 100%;
+}
+
+.crossImage {
+  height: 90%;
+  width: 70%;
+  animation: a2 1s linear infinite alternate;
+}
+.images {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes a2 {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1024px) {
+  .setting-main {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 981px) {
+  .card {
+    width: 30%;
+  }
+
+}
+
+@media (max-width: 770px) {
+  .card {
+    width: 46%;
+  }
+}
+
+@media (max-width: 529px) {
+  .modal {
+    width: 90%;
+  }
+
+  .search-inp {
+    width: 70%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .BGImage {
+    height: auto;
+
+  }
+}
